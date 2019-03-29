@@ -2,23 +2,32 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
 	<header>
-		<nav>
-			<ul>
-				<li><a href=""></a></li>
-			</ul>
+		<nav class="nav">
+			<ul class="nav-list nav-main-links">
+				<li class="nav-list-item nav-main-link-item"><a href="#projects">My Projects</a></li>
+				<li class="nav-list-item nav-main-link-item"><a href="#skills">My Skills</a></li>
+				<li class="nav-list-item nav-main-link-item"><a href="#about">About Me</a></li>
+            </ul>
+            <ul class="nav-list nav-social-links">
+                <li class="nav-list-item nav-social-link-item"><a href="https://dev.to/gablaroche"><i class="fab fa-dev"></i></a></li>
+                <li class="nav-list-item nav-social-link-item"><a href="https://github.com/gabLaroche"><i class="fab fa-github-square"></i></a></li>
+                <li class="nav-list-item nav-social-link-item"><a href="https://www.linkedin.com/in/gabriel-laroche-2b3706125/"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
 		</nav>
 	</header>
-	<main>
-		<section>
-			<h1>Hi! I'm Gabriel Laroche</h1>
-			<h2>I'm a front-end Web developer that also dabbles in Back-end development</h2>
+	<main class="container">
+		<section class="hero-banner">
+			<h1 class="hero-banner-title">Hi! I'm Gabriel Laroche</h1>
+			<h2 class="hero-banner-subtitle">I'm a front-end Web developer that also dabbles in Back-end development</h2>
         </section>
-        <section>
-            <h2>My personal projects</h2>
+        <section id="projects">
+            <h2>My Personal Projects</h2>
             <ul>
                 <li>
                     <picture></picture>
@@ -40,34 +49,35 @@
                     <p>
                         When making this website I didn't want to go back to basics and challenge my self by 
                         making a great website without using any of the bells and whistles that I'm used to.
-                        That's why I only used plain old HTML(5), CSS(3) and a tiny bit of php to handle the translations
-                        no Javascript, CSS preprocessor. More on that journey <a href="dev.to">Here</a>
+                        That's why I only used plain old HTML(5), CSS(3). No Javascript or CSS preprocessor(SASS).
+                        More on that journey <a href="https://dev.to/gablaroche/my-unbelievably-long-journey-to-make-my-personal-website-1h93">here</a>
                     </p>
                 </li>
             </ul>
         </section>
-        <section>
+        <section id="skills">
             <h2>My Skills</h2>
             <div>
-                <h3>Front-end skills</h3>
                 <ul>
                     <li>HTML/HTML5</li>
                     <li>CSS/CSS3/SASS</li>
                     <li>Javascript (ES6)</li>
                 </ul>
                 <p>I didn't list any Javascript framework here, because I think with a good base in javascript, you can learn any framework</p>
+                <p>I also know PHP and MySQL, but I haven't flexed those Back-end muscles in a long time.</p>
             </div>
-            <div>
-                <h3>Back-end skills</h3>
-                <ul>
-                    <li>PHP</li>
-                    <li>MySQL</li>
-                </ul>
-			</div>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a Bilingual front-end Web developer based out of Québec City</p>
+            <p>I've been passionate about Web development since my last year of highschool (2013 - 2014)</p>
         </section>
 	</main>
 	<footer>
-		<small>Copyright 2019 Gabriel Laroche</small>
+        <div class="footer-content">
+            <small>Copyright 2019 Gabriel Laroche</small>
+            <small>All icons used came from <a href="https://fontawesome.com/license/free">Font Awesome</a></small>
+        </div>
 	</footer>
 </body>
 </html>

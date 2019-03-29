@@ -1,0 +1,128 @@
+/*** GENRAL STYLES ***/
+/** Varibles Declaration **/
+@import url('https://fonts.googleapis.com/css?family=Muli:400,600,700');
+:root {
+    /* colour variables */
+    --light-grey: #eaeaea;
+    --ultra-light-grey: #fbfbfb;
+    --normal-blue: rgb(0, 26, 255);
+    --dark-blue: rgb(0, 17, 167);
+
+    /* Font variables */
+    --font-family: 'Muli', sans-serif;
+
+    /* Media Query Variables */
+    --max-width: 1250px;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+}
+
+body {
+    margin: 0;
+    background: var(--ultra-light-grey);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    letter-spacing: 2px;
+}
+
+a:link,
+a:visited {
+    color: var(--normal-blue);
+    text-decoration: none;
+    transition: 350ms color ease;
+}
+
+a:hover {
+    color: var(--dark-blue);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+
+/*** NAV ***/
+.nav {
+    /* position: fixed; */
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: white;
+    border-bottom: 2px solid var(--light-grey);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.nav-list.nav-social-links {
+    width: 10%;
+}
+
+.nav-list-item {
+    list-style-type: none;
+}
+
+.nav-main-link-item a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    margin-top: 2px;
+    background: var(--dark-blue);
+    transition: 350ms width ease;
+}
+
+.nav-main-link-item a:hover::after {
+    width: 100%;
+}
+
+.nav-social-link-item {
+    font-size: 2.5vw;
+}
+
+/*** MAIN ***/
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+/** Hero Banner **/
+.hero-banner-title,
+.hero-banner-subtitle  {
+    text-align: center;
+}
+.hero-banner-title {
+    font-size: 3vw;
+}
+/** Projects Section **/
+
+/** Skills Section **/
+
+/** Social Section **/
+
+
+/*** FOOTER ***/
+footer {
+    background: var(--light-grey);
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
