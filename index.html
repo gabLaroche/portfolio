@@ -5,6 +5,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="js-modules/project-card.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
 	<header>
@@ -30,33 +33,31 @@
             <h2>My Personal Projects</h2>
             <ul>
                 <li>
-                    <picture></picture>
-                    <a href="">Internet Explorer 11 end of support Countdown</a>
-                    <p>
-                        
-                    </p>
+                    <project-card alt="internet explorer death"
+                                  src="https://via.placeholder.com/150"
+                                  href="https://gabriellaroche.com/ie11-death-countdown/"
+                                  label="Internet Explorer 11 end of support Countdown"
+                                  description="Death to IE!!!!">
+                    </project-card>
                 </li>
                 <li>
-                    <picture></picture>
-                    <a href="">Don't press my buttons!</a>
-                    <p>
-                        I love making buttons and I wanted an excuse to experiment with css variables, so I made this.
-                    </p>
+                    <project-card alt="internet explorer death"
+                                  src="https://via.placeholder.com/150"
+                                  href="https://gabriellaroche.com/ie11-death-countdown/"
+                                  label="Don't press my buttons!"
+                                  description="I love making buttons and I wanted an excuse to experiment with css variables, so I made this.">
+                    </project-card>
                 </li>
                 <li>
-                    <picture></picture>
-                    <a href="">Common toolkit</a>
-                    <p></p>
-                </li>
-                <li>
-                    <picture></picture>
-                    <a href="#">My portfolio website (Wow, so meta)</a>
-                    <p>
-                        When making this website I didn't want to go back to basics and challenge my self by 
+                    <project-card alt="internet explorer death"
+                                  src="https://via.placeholder.com/150"
+                                  href="#"
+                                  label="My portfolio website (Wow, so meta)"
+                                  description="When making this website I didn't want to go back to basics and challenge my self by
                         making a great website without using any of the bells and whistles that I'm used to.
                         That's why I only used plain old HTML(5), CSS(3) and Javascript(ES6). No Javascript framework or CSS preprocessor(SASS).
-                        More on that journey <a href="https://dev.to/gablaroche/my-unbelievably-long-journey-to-make-my-personal-website-1h93">here</a>
-                    </p>
+                        More on that journey <a href='https://dev.to/gablaroche/my-unbelievably-long-journey-to-make-my-personal-website-1h93'>here</a>">
+                    </project-card>
                 </li>
             </ul>
         </section>
