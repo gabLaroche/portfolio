@@ -6,13 +6,13 @@
       "img" : [
         {
           "alt" : "alt",
-          "src" : "src"
+          "src" : "https://placehold.it/250x150"
         }
         ],
         "link" : [
           {
             "href" : "href",
-            "label" : "label"
+            "label" : "IE11 Death Countdown"
           }
       ]
     },
@@ -22,29 +22,29 @@
       "img" : [
         {
           "alt" : "alt",
-          "src" : "src"
+          "src" : "https://placehold.it/250x150"
         }
         ],
         "link" : [
           {
             "href" : "href",
-            "label" : "label"
+            "label" : "Don't press my buttons"
           }
       ]
     },
     {
-      "name" : "y portfolio website (Wow, so meta)",
+      "name" : "my portfolio website (Wow, so meta)",
       "description" : "When making this website I didn't want to go back to basics and challenge my self by making a great website without using any of the bells and whistles that I'm used to. That's why I only used plain old HTML(5), CSS(3) and Javascript(ES6). No Javascript framework or CSS preprocessor(SASS). More on that journey <a href='https://dev.to/gablaroche/my-unbelievably-long-journey-to-make-my-personal-website-1h93'>here</a>",
       "img" : [
         {
           "alt" : "alt",
-          "src" : "src"
+          "src" : "https://placehold.it/250x150"
         }
         ],
         "link" : [
           {
             "href" : "href",
-            "label" : "label"
+            "label" : "my portfolio website (Wow, so meta)"
           }
       ]
     }
