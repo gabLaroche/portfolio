@@ -2,10 +2,32 @@ const tagName = 'project-card';
 const template = document.createElement("template");
 
 template.innerHTML = `
-    <img id="img" />
-    <a id="link"></a>
-    <p id="description"></p>
+    <style>
+        :host {
+            position: relative;
+            display: block;
+            flex: 0 1 33%;
+        }
+        
+        .PC_img {
+            max-width: 100%;
+        }
+        
+        .PC_link {
+            display: block;
+        }
+        
+        .PC_description {
+            margin: 5px 0 0;
+        }
+    </style>
+    
+    <img class="PC_img" id="img" />
+    <a class="PC_link" id="link"></a>
+    <p  class="PC_description" id="description"></p>
 `;
+
+window.ShadyCSS && window.ShadyCSS.prepareTemplate(template, tagName);
 
 class ProjectCard extends HTMLElement {
 
@@ -83,6 +105,7 @@ class ProjectCard extends HTMLElement {
     }
 
     connectedCallback() {
+        this.updateShadyStyles();
         if (!this.shadowRoot) {
             this.attachShadow({mode: 'open'});
             this.shadowRoot.appendChild(template.content.cloneNode(true));
@@ -104,6 +127,10 @@ class ProjectCard extends HTMLElement {
 
     disconnectedCallback() {
         this.disconnectObserver();
+    }
+
+    updateShadyStyles() {
+        window.ShadyCSS && window.ShadyCSS.styleElement(this);
     }
 
     disconnectObserver() {

@@ -6,29 +6,13 @@
       "img" : [
         {
           "alt" : "alt",
-          "src" : "https://placehold.it/250x150"
+          "src" : "assets/img/ie11-death.png"
         }
         ],
         "link" : [
           {
-            "href" : "href",
+            "href" : "https://gabriellaroche.dev/ie11-death-countdown/",
             "label" : "IE11 Death Countdown"
-          }
-      ]
-    },
-    {
-      "name" : "Don't press my buttons",
-      "description" : "I love making buttons and I wanted an excuse to experiment with css variables, so I made this.",
-      "img" : [
-        {
-          "alt" : "alt",
-          "src" : "https://placehold.it/250x150"
-        }
-        ],
-        "link" : [
-          {
-            "href" : "href",
-            "label" : "Don't press my buttons"
           }
       ]
     },
@@ -38,14 +22,30 @@
       "img" : [
         {
           "alt" : "alt",
-          "src" : "https://placehold.it/250x150"
+          "src" : "https://placehold.it/356x174"
         }
         ],
         "link" : [
           {
-            "href" : "href",
+            "href" : "#",
             "label" : "my portfolio website (Wow, so meta)"
           }
+      ]
+    },
+    {
+      "name" : "More Projects Coming soon",
+      "description" : "",
+      "img" : [
+        {
+          "alt" : "alt",
+          "src" : "https://placehold.it/356x174"
+        }
+      ],
+      "link" : [
+        {
+          "href" : "",
+          "label" : ""
+        }
       ]
     }
   ]

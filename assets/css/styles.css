@@ -54,16 +54,14 @@ a:hover {
     width: 11vw;
     background: white;
     border: 2px solid var(--light-grey);
-    top: 0;
-    /*top: 50%;
-    transform: translateY(-50%);*/
+    top: 5px;
 }
 .nav-main-links {
-    left: 0;
+    left: 5px;
 }
 
 .nav-social-links {
-    right: 0;
+    right: 5px;
 }
 
 .nav-social-links .nav-list {
@@ -74,7 +72,7 @@ a:hover {
 }
 
 .nav-list {
-    margin: 0 auto;
+    margin: 5px auto;
     padding: 0;
 }
 
@@ -114,7 +112,11 @@ a:hover {
     font-size: 3vw;
 }
 /** Projects Section **/
-
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 /** Skills Section **/
 
 /** Social Section **/
