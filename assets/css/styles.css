@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:400,600,700');
 :root {
     /* colour variables */
-    --light-grey: #eaeaea;
+    --light-grey: #d3d3d3;
     --ultra-light-grey: #fbfbfb;
     --normal-blue: rgb(0, 26, 255);
     --dark-blue: rgb(0, 17, 167);
@@ -51,11 +51,12 @@ a:hover {
 .nav {
     position: fixed;
     display: flex;
-    top: 50%;
     width: 11vw;
     background: white;
     border: 2px solid var(--light-grey);
-    transform: translateY(-50%);
+    top: 0;
+    /*top: 50%;
+    transform: translateY(-50%);*/
 }
 .nav-main-links {
     left: 0;
