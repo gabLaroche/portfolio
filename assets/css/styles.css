@@ -119,9 +119,18 @@ a:hover {
 }
 /** Skills Section **/
 
-/** Social Section **/
+/** About Section **/
 
+/** Photography Section **/
+.photo-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.photo-card {
+    margin: 10px;
+}
 /*** FOOTER ***/
 footer {
     background: var(--light-grey);
