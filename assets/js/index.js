@@ -20,7 +20,7 @@ function populatePhotographyCards(photos) {
     photos.forEach( photoItem => {
         const photoElement = document.createElement('div');
         photoElement.classList.add('photo-card');
-        photoElement.innerHTML = `<img src="${photoItem.urls.small}" alt="photoItem.alt_description" />`;
+        photoElement.innerHTML = `<a class="photo-card-link" href="${photoItem.links.html}"><img src="${photoItem.urls.small}" alt="photoItem.alt_description" /></a>`;
         photoListContainer.appendChild(photoElement);
     })
 }
@@ -40,9 +40,17 @@ function getMyUnsplashPhotos() {
         .then(photos => populatePhotographyCards(photos));
 }
 
+function isAvailableForWork() {
+    const answerElem = document.getElementById('AvailableForWorkAnswer');
+    answerElem.innerText = `No, I'm very happy where I am.`;
+}
+
 function init() {
     getProjectsData();
-    getMyUnsplashPhotos()
+    getMyUnsplashPhotos();
+
+    const workAvailabilityBtn = document.getElementById('workAvailabilityBtn');
+    workAvailabilityBtn.addEventListener('click', isAvailableForWork, false);
 }
 
 (function () {

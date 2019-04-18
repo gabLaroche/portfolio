@@ -5,9 +5,6 @@
     <title>Title</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module" src="assets/js/modules/project-card.js"></script>
-    <script type="text/javascript" src="assets/js/index.js"></script>
 </head>
 <body>
 	<header>
@@ -15,8 +12,9 @@
 			<ul class="nav-list">
 				<li class="nav-list-item nav-main-link-item"><a href="#projects">My Projects</a></li>
 				<li class="nav-list-item nav-main-link-item"><a href="#skills">My Skills</a></li>
-				<li class="nav-list-item nav-main-link-item"><a href="#about">About Me</a></li>
 				<li class="nav-list-item nav-main-link-item"><a href="#photography">Photography</a></li>
+				<li class="nav-list-item nav-main-link-item"><a href="#work">Work Availability</a></li>
+				<li class="nav-list-item nav-main-link-item"><a href="#contact">Contact me</a></li>
             </ul>
 		</nav>
         <nav class="nav nav-social-links">
@@ -30,7 +28,7 @@
 	<main class="container">
 		<section class="hero-banner">
 			<h1 class="hero-banner-title">Hi! I'm Gabriel Laroche</h1>
-			<h2 class="hero-banner-subtitle">I'm a front-end Web developer that also dabbles in Back-end development</h2>
+			<h2 class="hero-banner-subtitle">I'm a front-end Web developer based in Québec. I also like to dip my toes in back-end development</h2>
         </section>
         <section id="projects">
             <h2>My Personal Projects</h2>
@@ -44,24 +42,19 @@
                     <li>CSS/CSS3/SASS</li>
                     <li>Javascript (ES6)</li>
                 </ul>
-                <p>I didn't list any Javascript framework here, because I think with a good base in javascript, you can learn any framework</p>
-                <p>I also know PHP and MySQL, but I haven't flexed those Back-end muscles in a long time.</p>
             </div>
         </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a Bilingual front-end Web developer based out of Québec City</p>
-            <p>I've been passionate about Web development since my last year of highschool (2013 - 2014)</p>
-        </section>
         <section id="photography">
-            <h2>Unrelated Skills! Part 1 : Photography!</h2>
+            <h2>Photography</h2>
             <p>
-                For the last few years, I found a passion for photography and I wanted to share my passion with the world.
-                The best way I found was by posting my best pictures on <a href="https://unsplash.com">Unsplash</a>.
-                I was already using Unsplash for my School projects and I thought this was the best way of giving back to
-                the community.
+                It doesn't have anything to do with Web Development, but I love to share my love of photography with the world
+                on <a href="https://unsplash.com/@gab_garoche">Unsplash</a>.
             </p>
             <div class="photo-list" id="photoList"></div>
+        </section>
+        <section id="work">
+            <h2><button type="button" id="workAvailabilityBtn">Am I available to work for you?</button></h2>
+            <p id="AvailableForWorkAnswer"></p>
         </section>
 	</main>
 	<footer>
@@ -70,5 +63,8 @@
             <small>All icons used came from <a href="https://fontawesome.com/license/free">Font Awesome</a></small>
         </div>
 	</footer>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="assets/js/modules/project-card.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>
 </body>
 </html>
