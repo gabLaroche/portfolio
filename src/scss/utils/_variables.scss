@@ -1,0 +1,23 @@
+:root {
+  --ultra-light-grey: #E9EFF2;
+  --light-grey: #d3d3d3;
+  --dark-grey: #262626;
+  --light-blue: rgb(36, 148, 206);
+  --normal-blue: rgb(23, 86, 118);
+  --dark-blue: rgb(5, 16, 22);
+
+  --bg-colour: var(--ultra-light-grey);
+  --text-colour: var(--dark-grey);
+
+  /* Font variables */
+  --font-family: 'Muli', sans-serif;
+  --mono-font-family: 'Source Code Pro', monospace;
+
+  /* Media Query Variables */
+  --max-width-mobile: 95vw;
+  --max-width-desktop: 75vw;
+}
+$tablet-size: 768px;
+$small-desktop-size: 1024px;
+$medium-desktop-size: 1100px;
+$large-desktop-size: 1250px;

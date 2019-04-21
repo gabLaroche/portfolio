@@ -2,69 +2,39 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width">
+    <title>Gabriel Laroche</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
-	<header>
-		<nav class="nav nav-main-links">
-			<ul class="nav-list">
-				<li class="nav-list-item nav-main-link-item"><a href="#projects">My Projects</a></li>
-				<li class="nav-list-item nav-main-link-item"><a href="#skills">My Skills</a></li>
-				<li class="nav-list-item nav-main-link-item"><a href="#photography">Photography</a></li>
-				<li class="nav-list-item nav-main-link-item"><a href="#work">Work Availability</a></li>
-				<li class="nav-list-item nav-main-link-item"><a href="#contact">Contact me</a></li>
-            </ul>
-		</nav>
-        <nav class="nav nav-social-links">
-            <ul class="nav-list">
-                <li class="nav-list-item nav-social-link-item"><a href="https://dev.to/gablaroche"><i class="fab fa-dev"></i></a></li>
-                <li class="nav-list-item nav-social-link-item"><a href="https://github.com/gabLaroche"><i class="fab fa-github-square"></i></a></li>
-                <li class="nav-list-item nav-social-link-item"><a href="https://www.linkedin.com/in/gabriel-laroche-2b3706125/"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </nav>
-	</header>
+    <my-navigation></my-navigation>
 	<main class="container">
 		<section class="hero-banner">
 			<h1 class="hero-banner-title">Hi! I'm Gabriel Laroche</h1>
 			<h2 class="hero-banner-subtitle">I'm a front-end Web developer based in Québec. I also like to dip my toes in back-end development</h2>
         </section>
-        <section id="projects">
-            <h2>My Personal Projects</h2>
-            <div class="project-list" id="projectList"></div>
-        </section>
-        <section id="skills">
-            <h2>My Skills</h2>
-            <div>
-                <ul>
-                    <li>HTML/HTML5</li>
-                    <li>CSS/CSS3/SASS</li>
-                    <li>Javascript (ES6)</li>
-                </ul>
-            </div>
-        </section>
-        <section id="photography">
-            <h2>Photography</h2>
-            <p>
-                It doesn't have anything to do with Web Development, but I love to share my love of photography with the world
-                on <a href="https://unsplash.com/@gab_garoche">Unsplash</a>.
-            </p>
-            <div class="photo-list" id="photoList"></div>
-        </section>
-        <section id="work">
-            <h2><button type="button" id="workAvailabilityBtn">Am I available to work for you?</button></h2>
-            <p id="AvailableForWorkAnswer"></p>
+
+        <section id="contact">
+            <form action="mailto:glaroche.dev@gmail.com" method="GET" target="_blank">
+                <h2>Contact Me</h2>
+                <div class="field">
+                    <label class="label" for="subject">Email Subject</label>
+                    <input class="input" name="subject" id="subject" type="text" />
+                </div>
+                <div class="field">
+                    <label class="label" for="body">Email Subject</label>
+                    <textarea class="textarea" name="body" id="body" ></textarea>
+                </div>
+                <div class="field">
+                    <button type="submit" class="submit">Create Email</button>
+                </div>
+            </form>
         </section>
 	</main>
-	<footer>
-        <div class="footer-content">
-            <small>Copyright 2019 Gabriel Laroche</small>
-            <small>All icons used came from <a href="https://fontawesome.com/license/free">Font Awesome</a></small>
-        </div>
-	</footer>
+    <my-footer></my-footer>
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module" src="assets/js/modules/project-card.js"></script>
+    <script type="module" src="assets/js/modules/my-navigation.js"></script>
+    <script type="module" src="assets/js/modules/my-footer.js"></script>
     <script type="text/javascript" src="assets/js/index.js"></script>
 </body>
 </html>

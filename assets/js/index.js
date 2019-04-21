@@ -25,6 +25,10 @@ function populatePhotographyCards(photos) {
     })
 }
 
+function populateBlogPosts(blogPosts) {
+
+}
+
 function getProjectsData() {
     fetch('./assets/data/projects.json')
         .then(data => data.json())
@@ -40,17 +44,17 @@ function getMyUnsplashPhotos() {
         .then(photos => populatePhotographyCards(photos));
 }
 
-function isAvailableForWork() {
-    const answerElem = document.getElementById('AvailableForWorkAnswer');
-    answerElem.innerText = `No, I'm very happy where I am.`;
+function getDevToPosts() {
+    const devToApiUrl = 'https://dev.to/api/articles?username=gablaroche';
+
+    fetch(devToApiUrl)
+        .then(data => data.json())
+        .then(data => populateBlogPosts(data))
 }
 
 function init() {
     getProjectsData();
     getMyUnsplashPhotos();
-
-    const workAvailabilityBtn = document.getElementById('workAvailabilityBtn');
-    workAvailabilityBtn.addEventListener('click', isAvailableForWork, false);
 }
 
 (function () {
