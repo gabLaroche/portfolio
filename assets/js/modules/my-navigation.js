@@ -80,7 +80,7 @@ template.innerHTML = `
             <ul class="nav-list">
                 <li class="nav-list-item nav-main-link-item"><a href="/projects">My Projects</a></li>
                 <li class="nav-list-item nav-main-link-item"><a href="/skills">My Skills</a></li>
-                <li class="nav-list-item nav-main-link-item"><a href="#contact">Contact me</a></li>
+                <li class="nav-list-item nav-main-link-item"><a href="/contact">Contact me</a></li>
             </ul>
         </nav>
         <nav class="nav nav-social-links">
