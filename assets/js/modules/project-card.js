@@ -22,9 +22,9 @@ template.innerHTML = `
         }
     </style>
     
-    <img class="PC_img" id="img" />
+    <!--<img class="PC_img" id="img" />-->
     <a class="PC_link" id="link"></a>
-    <p  class="PC_description" id="description"></p>
+    <!--<p  class="PC_description" id="description"></p>-->
 `;
 
 window.ShadyCSS && window.ShadyCSS.prepareTemplate(template, tagName);
@@ -37,7 +37,7 @@ class ProjectCard extends HTMLElement {
         }
     }
 
-    set alt(value) {
+    /*set alt(value) {
         this.safeSetAttribute('alt', value);
 
         if (this.shadowImage) {
@@ -59,7 +59,7 @@ class ProjectCard extends HTMLElement {
 
     get src() {
         return this.getAttribute('src');
-    }
+    }*/
 
     set href(value) {
         this.safeSetAttribute('href', value);
@@ -85,7 +85,7 @@ class ProjectCard extends HTMLElement {
         return this.getAttribute('label');
     }
 
-    set description(value) {
+    /*set description(value) {
         this.safeSetAttribute('description', value);
 
         if (this.shadowDescription) {
@@ -95,10 +95,11 @@ class ProjectCard extends HTMLElement {
 
     get description() {
         return this.getAttribute('description');
-    }
+    }*/
 
     static get observedAttributes() {
-        return ['alt', 'src', 'href', 'label', 'description']
+        // return ['alt', 'src', 'href', 'label', 'description']
+        return ['href', 'label']
     }
     constructor() {
         super();
@@ -109,15 +110,15 @@ class ProjectCard extends HTMLElement {
         if (!this.shadowRoot) {
             this.attachShadow({mode: 'open'});
             this.shadowRoot.appendChild(template.content.cloneNode(true));
-            this.shadowImage = this.shadowRoot.getElementById('img');
+            // this.shadowImage = this.shadowRoot.getElementById('img');
             this.shadowLink = this.shadowRoot.getElementById('link');
-            this.shadowDescription = this.shadowRoot.getElementById('description');
+            // this.shadowDescription = this.shadowRoot.getElementById('description');
 
-            this.alt = this.getAttribute('alt');
-            this.src = this.getAttribute('src');
+            /*this.alt = this.getAttribute('alt');
+            this.src = this.getAttribute('src');*/
             this.href = this.getAttribute('href');
             this.label = this.getAttribute('label');
-            this.description = this.getAttribute('description');
+            // this.description = this.getAttribute('description');
         }
     }
 
