@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "amd",
+    "sourceMap": true,
+    "outDir": "./dist/js",
+    "rootDir": "./src/ts",
+    "strict": true
+  },
+
+  "exclude":[
+    "node_modules"
+  ]
+}
