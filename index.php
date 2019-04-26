@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Gabriel Laroche</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="dist/css/styles.css" />
 </head>
 <body>
 <header>
@@ -96,7 +96,7 @@
     </div>
 </footer>
 <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-<script type="module" src="assets/js/modules/project-card.js"></script>
-<script type="text/javascript" src="assets/js/index.js"></script>
+<script type="module" src="dist/js/modules/project-card.js"></script>
+<script type="text/javascript" src="dist/js/index.js"></script>
 </body>
 </html>
