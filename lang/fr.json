@@ -3,8 +3,7 @@
   {
     "lang" : "",
     "title" : "",
-    "description" : "",
-    "keywords" : ""
+    "description" : ""
   },
 
   "headerSection" :
@@ -12,15 +11,19 @@
     "mainNav" :[
       {
         "href" : "#projects",
-        "label" : ""
+        "label" : "Mes Projets"
       },
       {
         "href" : "#skills",
-        "label" : ""
+        "label" : "Mes atouts"
+      },
+      {
+        "href" : "#photography",
+        "label" : "Photographie"
       },
       {
         "href" : "#contact",
-        "label" : ""
+        "label" : "Contactez-moi"
       }
     ],
     "socialNav" :[

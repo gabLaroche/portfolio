@@ -1,10 +1,9 @@
 {
   "meta" :
   {
-    "lang" : "",
-    "title" : "",
-    "description" : "",
-    "keywords" : ""
+    "lang" : "en",
+    "title" : "Gabriel Laroche",
+    "description" : "I'm a passionate frontend web developper and this is my personal website"
   },
 
   "headerSection" :
@@ -12,15 +11,19 @@
     "mainNav" :[
       {
         "href" : "#projects",
-        "label" : ""
+        "label" : "My Projects"
       },
       {
         "href" : "#skills",
-        "label" : ""
+        "label" : "My Skills"
+      },
+      {
+        "href" : "#photography",
+        "label" : "Photography"
       },
       {
         "href" : "#contact",
-        "label" : ""
+        "label" : "Contact Me"
       }
     ],
     "socialNav" :[
@@ -41,13 +44,13 @@
 
   "heroBannerSection" :
   {
-    "title" : "",
-    "subtitle" : ""
+    "title" : "Hi! I'm Gabriel Laroche",
+    "subtitle" : "I'm a passionate front-end Web developer based in Québec. I also like to dip my toes in back-end development"
   },
 
   "projectsSection" :
   {
-    "title" : "",
+    "title" : "My Personal Projects",
     "subtitle" : "",
 
     "projects" : [
@@ -104,21 +107,21 @@
 
   "skillsSection" :
   {
-    "title" : "",
+    "title" : "My Skills, according to me",
     "subtitle" : "",
 
     "skills" :
     [
       {
-        "name" : "",
+        "name" : "HTML/HTML5",
         "level" : 0
       },
       {
-        "name" : "",
+        "name" : "CSS/CSS3/SASS",
         "level" : 0
       },
       {
-        "name" : "",
+        "name" : "Javascript and Typescript (ES6)",
         "level" : 0
       }
     ]
@@ -126,13 +129,13 @@
 
   "photographySection" :
   {
-    "title" : "",
-    "subtitle" : ""
+    "title" : "Photography",
+    "subtitle" : "It doesn't have anything to do with Web Development, but I love to share my love of photography with the world on <a href=\"https://unsplash.com/@gab_garoche\">Unsplash</a>."
   },
 
   "contactSection" :
   {
-    "title" : "",
-    "subtitle" : ""
+    "title" : "Contact Me",
+    "subtitle" : "Let's talk OSS or anything else."
   }
 }
