@@ -3,54 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:900');
 
 @import "utils/variables";
-@import "pages/index";
-@import "pages/projects";
-@import "pages/skills";
-@import "pages/contact";
-
-html {
-  scroll-behavior: smooth;
-  font-family: var(--font-family);
-}
-
-body {
-  margin: 0;
-  background: var(--bg-colour);
-  color: var(--text-colour);
-}
-
-h1,h2,h3,h4,h5,h6 {
-  letter-spacing: 2px;
-}
-
-a:link,
-a:visited {
-  color: var(--normal-blue);
-  text-decoration: none;
-  transition: 350ms color ease;
-}
-
-a:hover {
-  color: var(--dark-blue);
-}
-
-.backLink {
-  display: block;
-  margin-top: 50px;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-/*** MAIN ***/
-.container {
-  max-width: var(--max-width-mobile);
-  min-height: 88vh;
-  margin: 0 auto 50px;
-
-  @media (min-width: $small-desktop-size) {
-    max-width: var(--max-width-desktop);
-  }
-}
+@import "utils/base-styles";
+@import "modules/header";
+@import "modules/index";
+@import "modules/projects";
+@import "modules/skills";
+@import "modules/contact";
+@import "modules/footer";
