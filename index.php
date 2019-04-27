@@ -1,22 +1,60 @@
 <?php
+if(isset($_REQUEST['lang'])) {
+    //Explicitely set as URL parameter
+    $lang = $_REQUEST['lang']; //read it from the URL parameters
+    $_SESSION['lang'] = $lang; //save it in the session
+    setcookie('lang', $lang, time() + (3600 * 24 * 20)); //set a cookie for 20 days
+}
+else if(isset($_SESSION['lang'])) {
+    //Fallback: read it from the session information
+    $lang = $_SESSION['lang'];
+}
+else if(isset($_COOKIE['lang'])) {
+    //Fallback: read it from the cookie
+    $lang = $_COOKIE['lang'];
+}
+else {
+    //Fallback: English is the default
+    $lang = 'en';
+}
+
+$langFileStr = file_get_contents('./lang/'.$lang.'.json');
+$translate = json_decode($langFileStr, true);
+
+$mainNav = $translate['headerSection']['mainNav'];
+$projects = $translate['projectsSection']['projects'];
+$skills = $translate['skillsSection']['skills'];
+
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $lang ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Gabriel Laroche</title>
     <link rel="stylesheet" href="dist/css/styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#175676">
+    <title><?php echo $translate['meta']['title'] ?></title>
 </head>
 <body>
 <header>
     <nav class="nav nav-main-links">
         <ul class="nav-list">
-            <li class="nav-list-item nav-main-link-item"><a href="#projects">My Projects</a></li>
-            <li class="nav-list-item nav-main-link-item"><a href="#skills">My Skills</a></li>
-            <li class="nav-list-item nav-main-link-item"><a href="#contact">Contact me</a></li>
+            <?php for($i = 0; $i < count($mainNav); $i++) { ?>
+                <li class="nav-list-item nav-main-link-item">
+                    <a href="<?php echo $mainNav[$i]['href'] ?>">
+                        <?php echo $mainNav[$i]['label'] ?>
+                    </a>
+                </li>
+            <?php } ?>
         </ul>
     </nav>
+    <button id="nav-switch-lang" data-requested-lang="<?php echo $translate['headerSection']['otherLang'] ?>">
+        <?php echo $translate['headerSection']['switchLangBtn'] ?>
+    </button>
     <nav class="nav nav-social-links">
         <ul class="nav-list">
             <li class="nav-list-item nav-social-link-item">
@@ -45,26 +83,33 @@
 </header>
 <main class="container">
     <section class="hero-banner">
-        <h1 class="hero-banner-title">Hi! I'm Gabriel Laroche</h1>
-        <h2 class="hero-banner-subtitle">I'm a front-end Web developer based in Québec. I also like to dip my toes in back-end development</h2>
+        <h1 class="hero-banner-title"><?php echo $translate['heroBannerSection']['title'] ?></h1>
+        <h2 class="hero-banner-subtitle"><?php echo $translate['heroBannerSection']['subtitle'] ?></h2>
     </section>
     <section id="projects">
-        <h1>My Personal Projects</h1>
-        <div class="project-list" id="projectList"></div>
+        <h1><?php echo $translate['projectsSection']['title'] ?></h1>
+        <ul class="project-list" id="projectList">
+            <?php for($i = 0; $i < count($projects); $i++) { ?>
+                <li class="project-item">
+                    <a href="<?php echo $projects[$i]['link']['href'] ?>">
+                        <?php echo $projects[$i]['link']['label'] ?>
+                    </a>
+                </li>
+            <?php } ?>
+        </ul>
     </section>
     <section id="skills">
-        <h2>My Skills</h2>
+        <h2><?php echo $translate['skillsSection']['title'] ?></h2>
         <ul class="skill-list">
-            <li class="skill-item">HTML/HTML5</li>
-            <li class="skill-item">CSS/CSS3/SASS</li>
-            <li class="skill-item">Javascript (ES6)</li>
+            <?php for($i = 0; $i < count($skills); $i++) { ?>
+                <li class="skill-item"><?php echo $skills[$i]['name'] ?></li>
+            <?php } ?>
         </ul>
     </section>
     <section id="photography">
-        <h2>Photography</h2>
+        <h2><?php echo $translate['photographySection']['title'] ?></h2>
         <p>
-            It doesn't have anything to do with Web Development, but I love to share my love of photography with the world
-            on <a href="https://unsplash.com/@gab_garoche">Unsplash</a>.
+            <?php echo $translate['photographySection']['subtitle'] ?>
         </p>
         <div class="photo-list" id="photoList"></div>
     </section>
@@ -95,8 +140,6 @@
         <small>All icons used came from <a href="https://fontawesome.com/license/free">Font Awesome</a></small>
     </div>
 </footer>
-<script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-<script type="module" src="dist/js/modules/project-card.js"></script>
-<script type="text/javascript" src="dist/js/index.js"></script>
+<script src="dist/js/require.js" data-main="dist/js/main.js"></script>
 </body>
 </html>

@@ -20,8 +20,6 @@
 
 .photo-card {
   margin: 30px;
-  transform: scale(1);
-  transition: all 200ms ease-in-out;
   position: relative;
 
   &:after {
@@ -33,7 +31,6 @@
     width: 100%;
     height: 100%;
     border: 2px solid var(--normal-blue);
-    transition: all 200ms ease-in-out;
     transform: rotate(5deg);
   }
 
@@ -51,6 +48,7 @@
       height: 100%;
       border: 2px solid var(--normal-blue);
       transform: scale(1.05) rotate(5deg);
+      z-index: -1;
     }
   }
 
