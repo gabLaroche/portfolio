@@ -93,12 +93,58 @@ header svg {
   left: 5px;
 }
 
+.nav-switch-lang-container {
+  display: flex;
+  position: fixed;
+  top: 115px;
+  right: 35px;
+  width: 8vw;
+  justify-content: center;
+}
+.nav-switch-lang-container .nav-switch-lang-item {
+  margin: 0 10px;
+}
+.nav-switch-lang-container input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  margin: 0;
+}
+.nav-switch-lang-container label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: var(--normal-blue);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+.nav-switch-lang-container label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.nav-switch-lang-container input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+.nav-switch-lang-container label:active:after {
+  width: 20px;
+}
+
 #nav-switch-lang {
   position: fixed;
-  display: block;
   bottom: 65px;
   right: 35px;
   z-index: 20;
+  display: block;
   cursor: pointer;
   background-color: var(--normal-blue);
   color: #fff;

@@ -52,9 +52,6 @@ $skills = $translate['skillsSection']['skills'];
             <?php } ?>
         </ul>
     </nav>
-    <button id="nav-switch-lang" data-requested-lang="<?php echo $translate['headerSection']['otherLang'] ?>">
-        <?php echo $translate['headerSection']['switchLangBtn'] ?>
-    </button>
     <nav class="nav nav-social-links">
         <ul class="nav-list">
             <li class="nav-list-item nav-social-link-item">
@@ -80,6 +77,12 @@ $skills = $translate['skillsSection']['skills'];
             </li>
         </ul>
     </nav>
+    <div class="nav-switch-lang-container" id="nav-switch-lang-container" data-current-lang="<?php echo $lang ?>">
+        <span class="nav-switch-lang-item">En</span>
+        <input type="checkbox" id="nav-switch-lang-toggle" />
+        <label for="nav-switch-lang-toggle"><?php echo $translate['headerSection']['otherLang'] ?></label>
+        <span class="nav-switch-lang-item">Fr</span>
+    </div>
 </header>
 <main class="container">
     <section class="hero-banner">
