@@ -103,6 +103,10 @@ global $skills;
         </p>
         <div class="photo-list" id="photoList"></div>
     </section>
+    <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/kVQZrdD8f">
+        <img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg" alt="Buy me a coffee">
+        <span>Buy me a coffee</span>
+    </a>
 </main>
 <footer>
     <div class="footer-content">
